@@ -9,6 +9,10 @@ jobs:
     steps:
       - checkout
       - python/load-cache
+      - run:
+          name: "the NAME is"
+          command: |
+            echo $NAME
       - python/install-deps
       - python/save-cache
       - run:
